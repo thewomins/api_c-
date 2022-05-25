@@ -5,3 +5,11 @@ public class Noticias{
     public string descripcion {set;get;} = String.Empty;
     public List<string> comentario {set;get;}
 }
+
+public Noticias(int id, string titulo, string descripcion, list< string> comentarios)
+{
+    this.comentarios=comentarios;
+    this.id=id;
+    this.titulo=titulo;
+    this.descripcion=descripcion;
+}
