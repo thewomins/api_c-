@@ -109,5 +109,9 @@ app.MapGet("/noticias",()=>{
     return Results.Ok(nc.mostrarNoticias());//200
 });
 
+app.MapGet("/noticias/rango",(int menor, int mayor)=>{
+    return Results.Ok(nc.mostrarNoticiasRango(menor,mayor));//200
+});
+
 
 app.Run();

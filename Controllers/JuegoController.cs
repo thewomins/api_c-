@@ -15,7 +15,7 @@ public class JuegoController{
         return juego;        
     }
 
-    public Juegos getGameId(int id){
+    public Juegos? getGameId(int id){
         return juegos_list.Find(list=>list.id==id);
     }
 
@@ -35,7 +35,7 @@ public class JuegoController{
         if(juego==null){
             return new Juegos ();
         }
-        Juegos juego_a_editar = getGameId(juego.id);
+        Juegos? juego_a_editar = getGameId(juego.id);
         if(juego_a_editar==null){
             return new Juegos ();
         }
