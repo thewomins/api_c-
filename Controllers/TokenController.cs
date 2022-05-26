@@ -4,9 +4,7 @@ namespace prueba2.Controllers;
 public class TokenController: Seguridad{
     private static List<Token> tokens = new List<Token> ();
     public TokenController(){
-        tokens.Add(new Token(base.generarToken(),false,1));
         tokens.Add(new Token(base.generarToken(),true,1));
-        tokens.Add(new Token(base.generarToken(),true,2));
     }
     public string asignarToken(int userId){
         //int? a=null;
@@ -39,9 +37,10 @@ public class TokenController: Seguridad{
 
     public Boolean verificaHeaders(HttpRequest request){
         try{
-            string auth="Authorization";
+            string auth="api-key";
             Boolean resp=false;
            foreach (var item in request.Headers){
+               System.Console.WriteLine(item.Key);
                if(item.Key.Equals(auth)){
                    string token_enviado_user=item.Value;
                    if(verficarToken(token_enviado_user)){
