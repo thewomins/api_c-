@@ -40,7 +40,7 @@ public class NoticiasController{
         if(mayor<menor || menor <=0){return temp;}
         for(int i = menor-1; i < noticias_list.Count && i<mayor ; i++){
             temp.Add(noticias_list[i]);
-            Console.WriteLine(noticias_list[i]+" - "+i+" - "+mayor+" - "+noticias_list.Count);
+            //Console.WriteLine(noticias_list[i]+" - "+i+" - "+mayor+" - "+noticias_list.Count);
         }
         return temp;
     }

@@ -37,7 +37,7 @@ public class TokenController: Seguridad{
 
     public Boolean verificaHeaders(HttpRequest request){
         try{
-            string auth="api-key";
+            string auth="Authorization";
             Boolean resp=false;
            foreach (var item in request.Headers){
                System.Console.WriteLine(item.Key);

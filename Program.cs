@@ -97,7 +97,7 @@ app.MapPost("/noticias/post",(Noticias noticia)=>{
     return Results.Ok(nc.crearNoticia(noticia));//200
 });
 
-app.MapPost("/noticias/post-",(int id,string comentario)=>{
+app.MapPost("/noticias/comentario_post",(int id,string comentario)=>{
     return Results.Ok(nc.anadirComentario(id,comentario));//200
 });
 
